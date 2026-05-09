@@ -35,7 +35,7 @@ def test_models_sends_auth_and_parses_response() -> None:
     assert models[0]["id"] == "rose-1"
     assert calls[0].url == "https://unit.test/v1/models"
     assert calls[0].headers["authorization"] == "Bearer test-key"
-    assert calls[0].headers["user-agent"] == "adola-python/0.1.0"
+    assert calls[0].headers["user-agent"] == "adola-python/0.1.1"
 
 
 def test_compress_sends_schema_payload() -> None:

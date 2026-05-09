@@ -17,7 +17,7 @@ from adola.types import (
 )
 
 DEFAULT_BASE_URL = "https://api.adola.app"
-USER_AGENT = "adola-python/0.1.0"
+USER_AGENT = "adola-python/0.1.1"
 
 
 class Adola:
@@ -58,7 +58,7 @@ class Adola:
         model: str = "rose-1",
         compression: CompressionOptions | None = None,
         protected: ProtectedOptions | None = None,
-        include_spans: bool = True,
+        include_spans: bool = False,
     ) -> CompressResponse:
         payload = _compress_payload(
             input=input,
@@ -127,7 +127,7 @@ class AsyncAdola:
         model: str = "rose-1",
         compression: CompressionOptions | None = None,
         protected: ProtectedOptions | None = None,
-        include_spans: bool = True,
+        include_spans: bool = False,
     ) -> CompressResponse:
         payload = _compress_payload(
             input=input,
@@ -229,4 +229,3 @@ def _headers(api_key: str) -> dict[str, str]:
 
 def _normalize_base_url(base_url: str) -> str:
     return base_url.rstrip("/")
-
