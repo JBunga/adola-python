@@ -10,7 +10,7 @@ import pytest
 
 from adola import Adola, AdolaAPIError, AsyncAdola
 
-FIXTURES = Path(__file__).resolve().parents[2] / "fixtures"
+FIXTURES = Path(__file__).resolve().parents[1] / "fixtures"
 
 
 def load_fixture(name: str) -> object:
@@ -189,4 +189,3 @@ def test_live_models_and_compress() -> None:
             compression={"target_ratio": 0.5},
         )
     assert response["receipt"]["tokens_saved"] >= 0
-

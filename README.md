@@ -3,7 +3,7 @@
 Python SDK for the Adola compression API.
 
 ```bash
-pip install git+https://github.com/JBunga/adola-python.git
+pip install adola
 ```
 
 ```python
@@ -22,4 +22,4 @@ print(result["receipt"]["tokens_saved"])
 
 The client defaults to `https://api.adola.app`. Set `ADOLA_API_KEY` for auth and `ADOLA_BASE_URL` for local testing.
 
-The repository contains only the SDK client and does not include the Adola application codebase.
+The package contains only the SDK client and does not include the Adola application codebase.
